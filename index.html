@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lantern — Películas y Series</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Lantern</a>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Buscar películas o series..." aria-label="Buscar" />
+        <select id="typeFilter" aria-label="Filtrar tipo">
+          <option value="all">Todos</option>
+          <option value="movie">Películas</option>
+          <option value="series">Series</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container browse">
+      <h2 id="resultsTitle">Explorar</h2>
+      <div id="grid" class="grid"></div>
+      <div id="noResults" class="no-results" hidden>No se encontraron resultados.</div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalClose"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <button id="closeBtn" class="modal-close" aria-label="Cerrar">×</button>
+      <div class="modal-content">
+        <img id="modalPoster" alt="" />
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalMeta"></p>
+          <p id="modalOverview"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> El faro — Demo local</small>
+    </div>
+  </footer>
+<script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
